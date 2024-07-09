@@ -1,8 +1,12 @@
 <div class="toolbar">
-  <mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <mat-toolbar class="toolbar-items">
+    <button mat-icon-button [matMenuTriggerFor]="dashboardMenu" class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
+    <mat-menu  #dashboardMenu="matMenu">
+      <button mat-menu-item>Home</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
     <span>Delivery Agent System</span>
     <span class="example-spacer"></span>
     <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
@@ -12,4 +16,4 @@
       <mat-icon>share</mat-icon>
     </button> -->
   </mat-toolbar>
-</div>
+</div> 
